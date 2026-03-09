@@ -25,19 +25,6 @@ export function Footer() {
             </span>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-8">
-            {['Telegram', 'GitHub', 'Email'].map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="text-text-muted text-sm hover:text-accent transition-colors duration-300"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
-
           {/* Back to top */}
           <a
             href="#"
