@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github, Bot, ShoppingCart, Crosshair, MessageSquare, Shield, CreditCard, BarChart3, Users, Zap, Search, Brain, Clock } from 'lucide-react';
+import { ExternalLink, Github, Bot, ShoppingCart, Crosshair, MessageSquare, Shield, CreditCard, BarChart3, Users, Zap, Search, Brain, Clock, BriefcaseBusiness, Layers3 } from 'lucide-react';
 
 const featuredProjects = [
   {
@@ -77,6 +77,56 @@ const featuredProjects = [
     bannerTitle: 'LEAD',
     bannerSubtitle: 'HUNTER',
   },
+  {
+    id: 4,
+    title: 'SalesPilot AI',
+    subtitle: 'AI-оператор продаж',
+    description:
+      'B2B-платформа для обработки входящих Telegram-лидов с AI-квалификацией, менеджерским inbox и внутренней операционной панелью. Проект объединяет API, воркер и dashboard в единый рабочий контур для команд продаж.',
+    features: [
+      { icon: <Bot size={16} />, text: 'Приём Telegram webhook-событий с нормализацией и дедупликацией лидов' },
+      { icon: <Brain size={16} />, text: 'AI-конвейер: классификация, извлечение данных, handoff и safe reply generation' },
+      { icon: <MessageSquare size={16} />, text: 'Общий inbox для менеджеров с takeover, reply flow и историей коммуникации' },
+      { icon: <BriefcaseBusiness size={16} />, text: 'Интеграции с amoCRM и Google Calendar через retry-safe adapter boundary' },
+      { icon: <Users size={16} />, text: 'Tenant-scoped auth, роли команды и изолированный доступ к данным агентств' },
+      { icon: <BarChart3 size={16} />, text: 'Аналитика, audit trail, e2e smoke flow и отдельный worker для фоновой обработки' },
+    ],
+    tags: ['NestJS', 'Next.js', 'TypeScript', 'PostgreSQL', 'Redis', 'Drizzle', 'AI Workflow'],
+    links: {
+      github: 'https://github.com/ArseniyGit/Manager-bot',
+    },
+    gradient: 'from-sky-500/30 via-cyan-500/20 to-blue-500/10',
+    accentColor: 'text-sky-400',
+    bannerBg: 'from-sky-900/40 via-cyan-900/30 to-dark-card',
+    bannerIcon: <Bot size={64} className="text-sky-400/30" />,
+    bannerTitle: 'SALES',
+    bannerSubtitle: 'PILOT',
+  },
+  {
+    id: 5,
+    title: 'ChannelOS',
+    subtitle: 'Платформа подписок и рекламы',
+    description:
+      'Telegram Mini App для управления платными подписками, рекламными размещениями и пользовательскими рангами. Платформа сочетает веб-интерфейс, бот, фоновую обработку задач и платёжные сценарии в одном продукте.',
+    features: [
+      { icon: <Layers3 size={16} />, text: 'Telegram Mini App с разделами подписок, объявлений, каталога и админ-панели' },
+      { icon: <CreditCard size={16} />, text: 'Два платёжных канала: Stripe checkout и Telegram Stars invoices' },
+      { icon: <Shield size={16} />, text: 'Контроль доступа в каналы и группы по активной подписке и paid-mode логике' },
+      { icon: <Clock size={16} />, text: 'Celery worker и beat для проверки подписок, cleanup объявлений и напоминаний' },
+      { icon: <MessageSquare size={16} />, text: 'aiogram-бот синхронизирует права, pre-checkout и пользовательские сценарии' },
+      { icon: <BarChart3 size={16} />, text: 'PostgreSQL, Redis, миграции и тесты для payment flow, webhooks и scheduled jobs' },
+    ],
+    tags: ['FastAPI', 'React', 'PostgreSQL', 'Redis', 'Celery', 'aiogram', 'Telegram Mini App'],
+    links: {
+      github: 'https://github.com/ArseniyGit/ChannelOS',
+    },
+    gradient: 'from-rose-500/30 via-pink-500/20 to-orange-500/10',
+    accentColor: 'text-rose-400',
+    bannerBg: 'from-rose-900/40 via-pink-900/30 to-dark-card',
+    bannerIcon: <CreditCard size={64} className="text-rose-400/30" />,
+    bannerTitle: 'CHANNEL',
+    bannerSubtitle: 'OS',
+  },
 ];
 
 export function FeaturedProjects() {
@@ -96,7 +146,7 @@ export function FeaturedProjects() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter"
           >
-            Топ-3 <span className="text-accent">проекта</span>
+            Топ-5 <span className="text-accent">проектов</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

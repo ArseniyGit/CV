@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Обо мне', href: '#about' },
   { label: 'Услуги', href: '#services' },
   { label: 'Стек', href: '#stack' },
-  { label: 'Топ-3 проекта', href: '#featured' },
+  { label: 'Топ-5 проектов', href: '#featured' },
   { label: 'Контакты', href: '#contact' },
 ];
 
